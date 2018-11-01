@@ -73,7 +73,78 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Features\dng.sharepoint.logging.configuration\dng.sharepoint.logging.configuration.Template.xml">
+      <DependentUpon>dng.sharepoint.logging.configuration.feature</DependentUpon>
+    </Content>
     <Content Include="Layouts\dng.sharepoint.logging\js\base64js.min.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\comment\comment.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\comment\continuecomment.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\dialog\dialog.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\dialog\dialog.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\display\autorefresh.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\display\fullscreen.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\display\fullscreen.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\display\panel.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\display\placeholder.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\display\rulers.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\edit\closebrackets.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\edit\closetag.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\edit\continuelist.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\edit\matchbrackets.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\edit\matchtags.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\edit\trailingspace.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\fold\brace-fold.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\fold\comment-fold.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\fold\foldcode.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\fold\foldgutter.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\fold\foldgutter.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\fold\indent-fold.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\fold\markdown-fold.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\fold\xml-fold.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\hint\anyword-hint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\hint\css-hint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\hint\html-hint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\hint\javascript-hint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\hint\show-hint.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\hint\show-hint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\hint\sql-hint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\hint\xml-hint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\lint\coffeescript-lint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\lint\css-lint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\lint\html-lint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\lint\javascript-lint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\lint\json-lint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\lint\lint.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\lint\lint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\lint\yaml-lint.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\merge\merge.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\merge\merge.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\mode\loadmode.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\mode\multiplex.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\mode\multiplex_test.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\mode\overlay.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\mode\simple.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\runmode\colorize.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\runmode\runmode-standalone.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\runmode\runmode.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\runmode\runmode.node.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\scroll\annotatescrollbar.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\scroll\scrollpastend.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\scroll\simplescrollbars.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\scroll\simplescrollbars.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\search\jump-to-line.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\search\match-highlighter.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\search\matchesonscrollbar.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\search\matchesonscrollbar.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\search\search.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\search\searchcursor.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\selection\active-line.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\selection\mark-selection.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\selection\selection-pointer.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\tern\tern.css" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\tern\tern.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\tern\worker.js" />
+    <Content Include="Layouts\dng.sharepoint.logging\js\cm\addon\wrap\hardwrap.js" />
     <Content Include="Layouts\dng.sharepoint.logging\js\cm\keymap\emacs.js" />
     <Content Include="Layouts\dng.sharepoint.logging\js\cm\keymap\sublime.js" />
     <Content Include="Layouts\dng.sharepoint.logging\js\cm\keymap\vim.js" />
@@ -421,6 +492,7 @@
     <Content Include="Layouts\dng.sharepoint.logging\js\jquery-2.2.4.js" />
     <Content Include="Layouts\dng.sharepoint.logging\js\text-encoder-lite.js" />
     <Content Include="Layouts\dng.sharepoint.logging\NlogConfiguration.aspx" />
+    <Content Include="NlogConfigurationEditorCustomAction\Elements.xml" />
     <None Include="buildWsp.bat" />
     <None Include="dng.sharepoint.logging.snk" />
     <Content Include="Features\dng.sharepoint.logging\dng.sharepoint.logging.Template.xml">
@@ -430,12 +502,18 @@
     <None Include="Features\dng.sharepoint.logging\dng.sharepoint.logging.feature">
       <FeatureId>{1cda29e3-7c7b-4bb9-ac8f-36fb94b7126a}</FeatureId>
     </None>
+    <None Include="Features\dng.sharepoint.logging.configuration\dng.sharepoint.logging.configuration.feature">
+      <FeatureId>{23c5e877-6d69-403f-b78e-93e7159d9d58}</FeatureId>
+    </None>
     <None Include="Layouts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{1a719734-6352-46a9-b15b-c49cb31a6361}</SharePointProjectItemId>
     </None>
     <EmbeddedResource Include="NLog.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="NlogConfigurationEditorCustomAction\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a368e972-d901-437b-840e-ba23231bfa7f}</SharePointProjectItemId>
+    </None>
     <None Include="packages.config" />
     <None Include="Package\Package.package">
       <PackageId>{ccb158d2-5e0b-440c-ba15-0ed00a42d8a7}</PackageId>
@@ -443,6 +521,7 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
+    <EmbeddedResource Include="Resources\NlogConfig.json" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

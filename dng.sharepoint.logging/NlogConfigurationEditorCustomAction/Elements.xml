@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Id="3436600e-a7e1-4f2c-b70e-58c573c2b1d4"
+    GroupId="SiteCollectionAdmin"
+    Location="Microsoft.SharePoint.SiteSettings"
+    Sequence="1000"
+    Title="NLog configuration editor"
+    Description="Opent the NLog built-in configuration editor for the site, the NLog support must be enabled first for the web application"
+    ImageUrl="~sitecollection/_layouts/15/images/edittargetapp32.png">
+    <UrlAction Url="~sitecollection/_layouts/15/dng.sharepoint.logging/NlogConfiguration.aspx"/>
+  </CustomAction>
+</Elements>

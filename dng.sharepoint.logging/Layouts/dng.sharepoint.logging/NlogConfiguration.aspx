@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="js/cm/lib/codemirror.css" />
     <script src="js/cm/mode/xml/xml.js" type="text/javascript"></script>
 
+    <link href="js/cm/addon/hint/show-hint.css" rel="stylesheet" />
+    <script src="js/cm/addon/hint/show-hint.js" type="text/javascript"></script>
+    <script src="js/cm/addon/hint/xml-hint.js" type="text/javascript"></script>
+
+    <link href="js/cm/theme/rubyblue.css" rel="stylesheet" />
+    <link href="js/cm/theme/pastel-on-dark.css" rel="stylesheet" />
+    <link href="js/cm/theme/solarized.css" rel="stylesheet" />
+
     <style type="text/css">
         div.errorLbl {
             display: block;
@@ -43,7 +51,8 @@
     <div id="xmlEditor"></div>
     <div id="buttonsContainer">
         <asp:Button ID="saveConfig" runat="server" Text="Save Changes" OnClientClick="return saveConfig();" />
-        <asp:Button ID="cancel" runat="server" Text="Cancel" OnClientClick="return getConfig();" />
+        <asp:Button ID="cancel" runat="server" Text="Cancel Changes" OnClientClick="return getConfig();" />
+        <asp:Button ID="close" runat="server" Text="Close" />
     </div>
     <div class="errorLbl">
         <asp:Label ID="lblMessage" runat="server" Text="" CssClass="errorLbl"></asp:Label>
@@ -111,10 +120,44 @@
             return false;
         }
 
+
+        //function completeAfter(cm, pred) {
+        //    var cur = cm.getCursor();
+        //    if (!pred || pred()) setTimeout(function () {
+        //        if (!cm.state.completionActive)
+        //            cm.showHint({ completeSingle: false });
+        //    }, 100);
+        //    return CodeMirror.Pass;
+        //}
+
+        //function completeIfAfterLt(cm) {
+        //    return completeAfter(cm, function () {
+        //        var cur = cm.getCursor();
+        //        return cm.getRange(CodeMirror.Pos(cur.line, cur.ch - 1), cur) == "<";
+        //    });
+        //}
+
+        //function completeIfInTag(cm) {
+        //    return completeAfter(cm, function () {
+        //        var tok = cm.getTokenAt(cm.getCursor());
+        //        if (tok.type == "string" && (!/['"]/.test(tok.string.charAt(tok.string.length - 1)) || tok.string.length == 1)) return false;
+        //        var inner = CodeMirror.innerMode(cm.getMode(), tok.state).state;
+        //        return inner.tagName;
+        //    });
+        //}
         var tec = $("#xmlEditor")[0];
         cm = CodeMirror(tec, {
             mode: 'xml',
-            lineNumbers: true
+            lineNumbers: true,
+            theme: 'solarized light',
+            //extraKeys: {
+            //    "'<'": completeAfter,
+            //    "'/'": completeIfAfterLt,
+            //    "' '": completeIfInTag,
+            //    "'='": completeIfInTag,
+            //    "Ctrl-Space": "autocomplete"
+            //},
+            //hintOptions: { schemaInfo: nlogJsonSchema }
         });
         getConfig();
 

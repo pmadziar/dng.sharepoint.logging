@@ -42,6 +42,12 @@ namespace dng.sharepoint.logging.Layouts.dng.sharepoint.logging
             scm.EnablePageMethods = true;
             lblMessage.Text = getScriptControlIds().TrimEnd(", \r\n".ToCharArray());
             liGeneratedScript.Mode = LiteralMode.PassThrough;
+            close.Click += close_Click;
+        }
+
+        void close_Click(object sender, EventArgs e)
+        {
+            Page.Response.Redirect(SPContext.Current.Web.Url.TrimEnd("/".ToCharArray()) + "/_layouts/15/settings.aspx", true);
         }
 
         private static string getNlogConfigContent()
@@ -69,6 +75,8 @@ namespace dng.sharepoint.logging.Layouts.dng.sharepoint.logging
             sb.AppendLine(@"var controlIds = {");
             appendControlIdRecurs(sb, this);
             sb.AppendLine(@"};");
+            //sb.Append("var nlogJsonSchema = ");
+            //sb.AppendLine(getNlogSchemaJson());
             sb.AppendLine(@"</script>");
             return sb.ToString();
         }
@@ -169,6 +177,21 @@ namespace dng.sharepoint.logging.Layouts.dng.sharepoint.logging
             throw new ApplicationException("Error validating config: " + e.Message);
         }
 
+        private static string getNlogSchemaJson()
+        {
+            Assembly asm = (typeof(NlogConfiguration)).Assembly;
+            string resourceName = asm.GetName().Name + ".Resources.NlogConfig.json";
+            string[] xxx = asm.GetManifestResourceNames();
+            byte[] bytes;
+
+            using (Stream resFilestream = asm.GetManifestResourceStream(resourceName))
+            {
+                bytes = new byte[resFilestream.Length];
+                resFilestream.Read(bytes, 0, bytes.Length);
+            }
+            string ret = Encoding.UTF8.GetString(bytes);
+            return ret;
+        }
 
         private static byte[] loadXsdBytes()
         {

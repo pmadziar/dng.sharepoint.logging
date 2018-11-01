@@ -31,6 +31,15 @@ namespace dng.sharepoint.logging.Layouts.dng.sharepoint.logging {
         protected global::System.Web.UI.WebControls.Button cancel;
         
         /// <summary>
+        /// close control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button close;
+        
+        /// <summary>
         /// lblMessage control.
         /// </summary>
         /// <remarks>
