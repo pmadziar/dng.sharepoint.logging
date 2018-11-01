@@ -5,6 +5,7 @@ using System.Security.Permissions;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
 using System.IO;
+using System.Security.AccessControl;
 
 namespace dng.sharepoint.logging.Features.dng.sharepoint.logging
 {
@@ -18,7 +19,7 @@ namespace dng.sharepoint.logging.Features.dng.sharepoint.logging
     [Guid("5df1a15c-6aad-4acd-aa85-815c594dc599")]
     public class dngsharepointEventReceiver : SPFeatureReceiver
     {
-        const string NLogConfig = "NLog.config";
+        public const string NLogConfig = "NLog.config";
         // Uncomment the method below to handle the event raised after a feature has been activated.
 
         public override void FeatureActivated(SPFeatureReceiverProperties properties)
@@ -53,6 +54,7 @@ namespace dng.sharepoint.logging.Features.dng.sharepoint.logging
                     if (bytes.Length > 0)
                     {
                         File.WriteAllBytes(nlogConfigPath, bytes);
+                        setFileAccess(nlogConfigPath, webApp);
                     }
                     else
                     {
@@ -68,6 +70,14 @@ namespace dng.sharepoint.logging.Features.dng.sharepoint.logging
             {
                 throw new SPException(ex.Message, ex);
             }
+        }
+
+        private void setFileAccess(string nlogConfigPath, SPWebApplication webApp)
+        {
+            string appPoolAccount = webApp.ApplicationPool.Username;
+            FileSecurity fSecurity = File.GetAccessControl(nlogConfigPath);
+            fSecurity.AddAccessRule(new FileSystemAccessRule(appPoolAccount, FileSystemRights.FullControl, AccessControlType.Allow));
+            File.SetAccessControl(nlogConfigPath, fSecurity);
         }
 
 
