@@ -41,15 +41,20 @@
     <AssemblyOriginatorKeyFile>dng.sharepoint.logging.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.4.13\lib\net45\NLog.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Extensions" />
@@ -498,7 +503,9 @@
     <Content Include="Features\dng.sharepoint.logging\dng.sharepoint.logging.Template.xml">
       <DependentUpon>dng.sharepoint.logging.feature</DependentUpon>
     </Content>
-    <EmbeddedResource Include="NLog.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Features\dng.sharepoint.logging\dng.sharepoint.logging.feature">
       <FeatureId>{1cda29e3-7c7b-4bb9-ac8f-36fb94b7126a}</FeatureId>
     </None>
@@ -508,9 +515,9 @@
     <None Include="Layouts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{1a719734-6352-46a9-b15b-c49cb31a6361}</SharePointProjectItemId>
     </None>
-    <EmbeddedResource Include="NLog.xsd">
+    <None Include="NLog.xsd">
       <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </None>
     <None Include="NlogConfigurationEditorCustomAction\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{a368e972-d901-437b-840e-ba23231bfa7f}</SharePointProjectItemId>
     </None>

@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dng.sharepoint.logging", "dng.sharepoint.logging\dng.sharepoint.logging.csproj", "{8F0D648B-46D7-4F34-BE28-0F4D3D42FC5F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dng.sharepoint.logging.xsd2json", "dng.sharepoint.logging.xsd2json\dng.sharepoint.logging.xsd2json.csproj", "{6F52D6DE-F89B-43CA-B61C-B795A91999D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +17,11 @@ Global
 		{8F0D648B-46D7-4F34-BE28-0F4D3D42FC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F0D648B-46D7-4F34-BE28-0F4D3D42FC5F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8F0D648B-46D7-4F34-BE28-0F4D3D42FC5F}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{6F52D6DE-F89B-43CA-B61C-B795A91999D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F52D6DE-F89B-43CA-B61C-B795A91999D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F52D6DE-F89B-43CA-B61C-B795A91999D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F52D6DE-F89B-43CA-B61C-B795A91999D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7480941D-189A-436F-9C97-4F11DD4BED74}
 	EndGlobalSection
 EndGlobal

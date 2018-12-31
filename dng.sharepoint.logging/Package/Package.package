@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ccb158d2-5e0b-440c-ba15-0ed00a42d8a7" solutionId="ccb158d2-5e0b-440c-ba15-0ed00a42d8a7" resetWebServer="false" sharePointProductVersion="15.0" name="dng.sharepoint.logging" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <assemblies>
-    <customAssembly location="NLog.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\NLog.4.4.13\lib\net45\NLog.dll" />
+    <customAssembly location="NLog.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="bin\Debug\NLog.dll" />
   </assemblies>
   <features>
     <featureReference itemId="1cda29e3-7c7b-4bb9-ac8f-36fb94b7126a" />
